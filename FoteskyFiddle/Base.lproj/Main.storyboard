@@ -70,41 +70,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wnW-pm-dE2">
-                                <rect key="frame" x="37.5" y="190.5" width="300" height="498"/>
-                                <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dsQ-9f-b58">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="dsQ-9f-b58" secondAttribute="height" id="4Zz-RP-fWN"/>
-                                        </constraints>
-                                    </scrollView>
-                                    <visualEffectView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xkg-Z3-Daf">
-                                        <rect key="frame" x="30" y="320" width="240" height="128"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="LB0-0g-mFt">
-                                            <rect key="frame" x="0.0" y="0.0" width="241" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kI-M9-eBj">
+                                <rect key="frame" x="38" y="216" width="300" height="299"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7kI-M9-eBj" secondAttribute="height" id="mKz-0Z-Oqm"/>
+                                </constraints>
+                            </scrollView>
+                            <visualEffectView hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfr-As-rGc" customClass="WithHoleInItVisualEffectView" customModule="FoteskyFiddle" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <view key="contentView" hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="lHW-v7-mpY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4My-0X-g7U">
+                                            <rect key="frame" x="38" y="215.5" width="300" height="300"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <blurEffect style="light"/>
-                                    </visualEffectView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSt-7B-XH4">
-                                        <rect key="frame" x="124.5" y="468" width="51" height="30"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Crop it!"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXb-i8-gb5">
+                                            <rect key="frame" x="60" y="461" width="254" height="121"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                                <connections>
+                                    <outlet property="button" destination="BXb-i8-gb5" id="41x-Bj-OAF"/>
+                                    <outlet property="holeView" destination="4My-0X-g7U" id="gSc-ya-PsG"/>
+                                </connections>
+                            </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dsQ-9f-b58" firstAttribute="width" secondItem="LkL-gZ-sr1" secondAttribute="width" multiplier="0.8" id="6de-v7-ILT"/>
-                            <constraint firstItem="wnW-pm-dE2" firstAttribute="centerY" secondItem="A6s-mT-BzM" secondAttribute="centerY" id="ZwH-vU-IGd"/>
-                            <constraint firstItem="wnW-pm-dE2" firstAttribute="centerX" secondItem="A6s-mT-BzM" secondAttribute="centerX" id="i5H-2X-IhL"/>
+                            <constraint firstItem="4My-0X-g7U" firstAttribute="width" secondItem="7kI-M9-eBj" secondAttribute="width" id="Bgx-Dv-i4W"/>
+                            <constraint firstItem="7kI-M9-eBj" firstAttribute="centerY" secondItem="A6s-mT-BzM" secondAttribute="centerY" id="DBO-8r-mSN"/>
+                            <constraint firstItem="7kI-M9-eBj" firstAttribute="width" secondItem="LkL-gZ-sr1" secondAttribute="width" multiplier="0.8" id="LZn-1w-7H1"/>
+                            <constraint firstItem="7kI-M9-eBj" firstAttribute="centerX" secondItem="A6s-mT-BzM" secondAttribute="centerX" id="N8M-XC-pbY"/>
+                            <constraint firstItem="4My-0X-g7U" firstAttribute="centerY" secondItem="7kI-M9-eBj" secondAttribute="centerY" id="ZUR-Y2-T2E"/>
+                            <constraint firstItem="4My-0X-g7U" firstAttribute="height" secondItem="7kI-M9-eBj" secondAttribute="height" id="dzt-0g-SZM"/>
+                            <constraint firstItem="4My-0X-g7U" firstAttribute="centerX" secondItem="7kI-M9-eBj" secondAttribute="centerX" id="eZv-6v-S6P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A6s-mT-BzM"/>
                     </view>
                     <connections>
-                        <outlet property="cropView" destination="dsQ-9f-b58" id="KtZ-xg-h4q"/>
+                        <outlet property="cropView" destination="7kI-M9-eBj" id="CrJ-bq-0d5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lY5-hL-JuB" userLabel="First Responder" sceneMemberID="firstResponder"/>

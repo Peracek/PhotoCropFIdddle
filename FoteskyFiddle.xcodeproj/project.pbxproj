@@ -13,6 +13,8 @@
 		BBA54BBB1FACB63700C53626 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA54BB91FACB63600C53626 /* Main.storyboard */; };
 		BBA54BBD1FACB63700C53626 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBA54BBC1FACB63700C53626 /* Assets.xcassets */; };
 		BBA54BC01FACB63700C53626 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA54BBE1FACB63700C53626 /* LaunchScreen.storyboard */; };
+		BBE7984C1FBE23A2008C3A4C /* WithHoleInItView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7984B1FBE23A2008C3A4C /* WithHoleInItView.swift */; };
+		BBE7984E1FBE29AF008C3A4C /* WithHoleInItVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7984D1FBE29AF008C3A4C /* WithHoleInItVisualEffectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BBA54BBC1FACB63700C53626 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBA54BBF1FACB63700C53626 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBA54BC11FACB63700C53626 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBE7984B1FBE23A2008C3A4C /* WithHoleInItView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithHoleInItView.swift; sourceTree = "<group>"; };
+		BBE7984D1FBE29AF008C3A4C /* WithHoleInItVisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithHoleInItVisualEffectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 				BBA54BB91FACB63600C53626 /* Main.storyboard */,
 				BBA54BB71FACB63600C53626 /* ViewController.swift */,
 				BB8F16F41FBD8F2D007ECD70 /* ImageViewController.swift */,
+				BBE7984D1FBE29AF008C3A4C /* WithHoleInItVisualEffectView.swift */,
+				BBE7984B1FBE23A2008C3A4C /* WithHoleInItView.swift */,
 				BB8F16F61FBD8F62007ECD70 /* Support Files */,
 			);
 			path = FoteskyFiddle;
@@ -147,9 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBE7984C1FBE23A2008C3A4C /* WithHoleInItView.swift in Sources */,
 				BBA54BB81FACB63600C53626 /* ViewController.swift in Sources */,
 				BB8F16F51FBD8F2D007ECD70 /* ImageViewController.swift in Sources */,
 				BBA54BB61FACB63600C53626 /* AppDelegate.swift in Sources */,
+				BBE7984E1FBE29AF008C3A4C /* WithHoleInItVisualEffectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
